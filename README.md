@@ -1,2 +1,5 @@
 # NEW Heatmap Generation
  
+These are the new codes for generating the same heatmaps from before. They utilize two functions (LatticeSearch_Cluster and LatticeSearch_Bound) that will determine the state of the ssDNA lattice at each binding/unbinding event. The functions are currently set to be utilized in a code that tracks the protein concentrations (L - constant value) rather than discrete protein populations.
+All of these should be all set to be run in Matlab using parallel computing. The only adjustments that may be needed is the range and number of values tested for each parameter in the heatmaps. They should be setup to run a reasonable range that provides some detail about what's happening as parameter values change, but also not too much that the codes take forever to run.
+If I remember correctly, when running on Dr. Tabei's computer remotely and using parallel computing, the heatmaps would generally take anywhere from 12 hours to 24 hours or so to generate. Each one should be set up with a "waitbar" function that will tell you (or at least show you) how far along the code is in it's run.
